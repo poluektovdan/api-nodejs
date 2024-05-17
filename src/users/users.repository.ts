@@ -22,7 +22,7 @@ export class UsersRepository implements IUsersRepository {
 	async find(email: string): Promise<UserModel | null> {
 		return this.prismaService.client.userModel.findFirst({
 			where: {
-				email
+				email: {}
 			}
 		});
 	}
